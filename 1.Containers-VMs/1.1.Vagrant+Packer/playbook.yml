@@ -1,0 +1,32 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Update apt
+      apt: update_cache=yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: latest
+        
+    - name: Install mysql-server
+      apt:
+        name: mysql-server
+        state: latest
+        
+    - name: Install mysql-client
+      apt:
+        name: mysql-client
+        state: latest
+    
+    - name: Install java
+      apt:
+        name: openjdk-6-jdk
+        state: latest
+        install_recomends: no
+    
+    - name: Install tomcat
+      apt:
+        name: tomcat
+        state: latest
