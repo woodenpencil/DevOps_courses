@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "######################################## MY BASH SCRIPT #######################################"
+yum -y update
+sudo amazon-linux-extras install epel
+sudo yum update
+sudo yum install nginx
+sudo "Hi, there is nginx server at work" > /usr/share/nginx/html/index.html
+sudo systemctl start nginx
