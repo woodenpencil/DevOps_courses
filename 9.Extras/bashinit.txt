@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "######################################## MY BASH SCRIPT #######################################"
+yum -y update
+sudo yum update -y
+sudo yum install -y httpd php72 mysql57-server php72-mysqlnd
+sudo systemctl start httpd
